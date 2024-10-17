@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utwórz nowe konto - STARTER WSPA</title>
+    <title>Utwórz nowe konto - STARTER SPORTOWY</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -39,9 +39,25 @@
             padding: 10px;
             border-radius: 5px;
             width: 100%;
+            margin-top: 10px; /* Dodano margines */
         }
         button:hover {
             background-color: #218838; /* Ciemniejszy zielony */
+        }
+        .cancel-button {
+            background-color: #dc3545; /* Czerwony przycisk */
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px; /* Zmniejszono padding */
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px; /* Dodano margines */
+            width: 70%; /* Zmniejszono szerokość */
+        }
+        .cancel-button:hover {
+            background-color: #c82333; /* Ciemniejszy czerwony */
         }
         footer {
             margin-top: 20px;
@@ -75,9 +91,11 @@
                 <button type="submit" name="przycisk" value="Utwórz konto">Utwórz konto</button>
             </div>
         </form>
+        <!-- Przycisk Anuluj -->
+        <a href="logowanie.html" class="cancel-button">Anuluj</a>
     </section>
     <footer>
-        <p>&#169; 2021-2024 STARTER WSPA</p>
+        <p>&#169; 2021-2024 STARTER SPORTOWY</p>
     </footer>
 </div>
 

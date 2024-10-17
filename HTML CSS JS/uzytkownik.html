@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Użytkownika - STARTER SPORTOWY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://startersportowy.pl/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Kolor tła strony */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .flag {
+            width: 100%;
+            height: 50px; /* Wysokość flagi */
+            background: linear-gradient(to right, #007bff 50%, #ffcc00 50%); /* Niebiesko-żółta flaga w poziomie */
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .user-greeting {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .user-panel {
+            margin-top: 20px;
+        }
+        .event-select, .sport-select {
+            margin-bottom: 10px;
+            width: calc(100% - 22px); /* Dostosowuje szerokość do przycisków */
+            padding: 10px;
+        }
+        button {
+            background-color: #007bff; /* Niebieski przycisk */
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Ciemniejszy niebieski */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Flaga -->
+    <div class="flag"></div>
+
+    <!-- nagłówek -->
+    <header>
+        <h1>Panel Użytkownika</h1>
+        <div class="user-greeting">Witaj, Użytkowniku!</div>
+    </header>
+
+    <!-- Panel użytkownika -->
+    <div class="user-panel">
+        <h3>Zarejestruj się na Wydarzenie</h3>
+        
+        <label for="event-select">Wybierz wydarzenie:</label>
+        <select class="event-select" id="event-select">
+            <option value="">-- Wybierz wydarzenie --</option>
+            <option value="mistrzostwa">Mistrzostwa Polski</option>
+            <option value="klasa_pierwsza">Klasa Pierwsza</option>
+            <option value="klasa_druga">Klasa Druga</option>
+            <option value="druzynowe">Drużynowe Mistrzostwa Polski</option>
+        </select>
+
+        <!-- Wybór sportu -->
+        <label for="sport-select">Wybierz sport:</label>
+        <select class="sport-select" id="sport-select">
+            <option value="">-- Wybierz sport --</option>
+            <option value="bieg_na_100_m">Bieg na 100 m</option>
+            <option value="skok_wzwyz">Skok wzwyż</option>
+            <option value="rzut_pilka">Rzut piłką</option>
+            <option value="szachy">Szachy</option>
+            <option value="badminton">Badminton</option>
+            <option value="koszykowka">Koszykówka</option>
+            <option value="boks">Boks</option>
+            <option value="pilka_nozna">Piłka nożna</option>
+            <option value="siatkowka">Siatkówka</option>
+            <option value="lyzwiarstwo_figurowe">Łyżwiarstwo figurowe</option>
+            <option value="wspinaczka">Wspinaczka</option>
+            <option value="bilard">Bilard</option>
+            <option value="e_sport_fifa">E-sport FIFA</option>
+            <option value="zapasy">Zapasy</option>
+            <option value="rugby">Rugby</option>
+            <option value="taniec_towarzyski">Taniec towarzyski</option>
+            <option value="golf">Golf</option>
+            <option value="plywanie">Pływanie</option>
+            <option value="hokej_na_lodzie">Hokej na lodzie</option>
+            <option value="wioslarstwo">Wioślarstwo</option>
+        </select>
+
+        <div>
+            <button id="register-event">Zarejestruj się</button>
+            <button id="logout">Wyloguj</button>
+        </div>
+    </div>
+
+    <!-- stopka -->
+    <footer>
+        <p>Pomoc techniczna: <a href="mailto:support@startersportowy.pl">support@startersportowy.pl</a></p>
+        <p>&#169; 2021-2024 STARTER SPORTOWY | Czas: 0.015029 s.</p>
+    </footer>
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        // Logika do rejestracji na wydarzenie
+        $("#register-event").on("click", function() {
+            const eventName = $("#event-select").val();
+            const sportName = $("#sport-select").val();
+            alert("Zarejestrowano na wydarzenie: " + eventName + "\nSport: " + sportName);
+            // Możesz dodać tutaj kod do rejestracji na wydarzenie w bazie danych
+        });
+
+        $("#logout").on("click", function() {
+            alert("Wylogowano.");
+            // Możesz dodać tutaj kod do wylogowywania z systemu
+        });
+    });
+</script>
+
+</body>
+</html>

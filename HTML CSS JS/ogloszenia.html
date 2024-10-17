@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie - STARTER SPORTOWY</title>
+    <title>Ogłoszenia - STARTER SPORTOWY</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://startersportowy.pl/favicon.ico">
+    <link rel="shortcut icon" href="https://starter.startersportowy/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        @keyframes blink {
-            50% {
-                color: transparent;
-                text-shadow: none;
-            }
-        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -81,16 +75,37 @@
             padding: 20px;
             font-size: 12px;
         }
-        button {
-            background-color: #28a745; /* Zielony przycisk */
+        h2 {
+            color: #28a745;
+        }
+        .announcement-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .announcement-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .announcement-item:last-child {
+            border-bottom: none;
+        }
+        .back-button {
+            background-color: #007bff; /* Niebieski przycisk */
             color: white;
             border: none;
             cursor: pointer;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
         }
-        button:hover {
-            background-color: #218838; /* Ciemniejszy zielony */
+        .back-button:hover {
+            background-color: #0056b3; /* Ciemniejszy niebieski */
         }
     </style>
 </head>
@@ -100,7 +115,7 @@
 
     <!-- nagłówek -->
     <header>
-        <h1>STARTER SPORTOWY</h1>
+        <h1>STARTER SPORTOWY - OGŁOSZENIA</h1>
     </header>
 
     <!-- boczne menu -->
@@ -122,34 +137,50 @@
                         <li><a href="ogloszenia.html">Ogłoszenia</a></li>
                     </ul>
                 </li>
-                <li style="float:right"><a href="#">Logowanie</a></li>
+                <li style="float:right"><a href="logowanie.html">Logowanie</a></li>
             </ul>
         </nav>
     </aside>
 
     <!-- sekcja główna -->
     <section id="main">
-        <center>
-            <h2>Logowanie do systemu STARTER SPORTOWY</h2>
-            <form method="POST" action="?log=1">
-                <input type="hidden" name="from" value="/index.php">
-                <input type="hidden" name="LP_Impreza" value="1">
-                <table>
-                    <tr>
-                        <td align="right">Login:</td>
-                        <td><input type="text" name="login" required=""></td>
-                    </tr>
-                    <tr>
-                        <td align="right">Hasło:</td>
-                        <td><input type="password" name="haslo" required=""></td>
-                    </tr>
-                </table>
-                <div>
-                    <button type="submit" name="przycisk" value=" Zaloguj ">ZALOGUJ</button>
-                </div>
-            </form>
-            <a href="nowe_konto.html">Utwórz nowe konto</a>
-        </center>
+        <h2>Ogłoszenia</h2>
+        <div class="announcement-section">
+            <div class="announcement-item">
+                <h3>Nowe zasady uczestnictwa</h3>
+                <p>Przypominamy, że każdy zawodnik musi przedłożyć aktualne badania lekarskie przed przystąpieniem do zawodów.</p>
+            </div>
+            <div class="announcement-item">
+                <h3>Zmiana lokalizacji</h3>
+                <p>Wydarzenie w badmintonie odbędzie się w nowej lokalizacji: Hala Sportowa przy ul. Sportowej 5 w Warszawie. Prosimy o zapoznanie się z nowymi planami dojazdu.</p>
+            </div>
+            <div class="announcement-item">
+                <h3>Terminy zapisów</h3>
+                <p>Rozpoczęcia zawodów dla poszczególnych rank + kursy:</p>
+                <ul>
+                    <li><strong>Mistrzostwa Polski:</strong> 5 czerwca</li>
+                    <li><strong>Klasa pierwsza:</strong> 5 maja</li>
+					<li><strong>Klasa druga:</strong> 5 kwietnia</li>
+					<li><strong>Drużynowe Mistrzostwa Polski:</strong> 15 marca</li>					
+					<li><strong>Kurs sędziów:</strong> 1 luty</li>
+                    <li><strong>Warsztaty dla trenerów:</strong> 15 luty</li>
+                </ul>
+            </div>
+            <div class="announcement-item">
+                <h3>Wymogi dla zawodników</h3>
+                <p>Aby wziąć udział w zawodach, zawodnicy muszą spełniać następujące wymagania:</p>
+                <ul>
+                    <li>Aktualne badania lekarskie</li>
+                    <li>Wiek odpowiedni do kategorii</li>
+                    <li>Rejestracja w systemie zawodów</li>
+                    <li>Przynależność do klubu sportowego</li>
+                    <li>Zgoda rodziców dla zawodników niepełnoletnich</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Przycisk powrotu do logowania -->
+        <a href="logowanie.html" class="back-button">Powrót do logowania</a>
     </section>
 
     <!-- stopka -->

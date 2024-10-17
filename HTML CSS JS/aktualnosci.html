@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie - STARTER SPORTOWY</title>
+    <title>Aktualności - STARTER SPORTOWY</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://startersportowy.pl/favicon.ico">
+    <link rel="shortcut icon" href="https://starter.startersportowy.pl/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        @keyframes blink {
-            50% {
-                color: transparent;
-                text-shadow: none;
-            }
-        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -81,16 +75,37 @@
             padding: 20px;
             font-size: 12px;
         }
-        button {
-            background-color: #28a745; /* Zielony przycisk */
+        h2 {
+            color: #28a745;
+        }
+        .news-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .news-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .back-button {
+            background-color: #007bff; /* Niebieski przycisk */
             color: white;
             border: none;
             cursor: pointer;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
         }
-        button:hover {
-            background-color: #218838; /* Ciemniejszy zielony */
+        .back-button:hover {
+            background-color: #0056b3; /* Ciemniejszy niebieski */
         }
     </style>
 </head>
@@ -100,7 +115,7 @@
 
     <!-- nagłówek -->
     <header>
-        <h1>STARTER SPORTOWY</h1>
+        <h1>STARTER SPORTOWY- AKTUALNOŚCI</h1>
     </header>
 
     <!-- boczne menu -->
@@ -122,34 +137,48 @@
                         <li><a href="ogloszenia.html">Ogłoszenia</a></li>
                     </ul>
                 </li>
-                <li style="float:right"><a href="#">Logowanie</a></li>
+                <li style="float:right"><a href="logowanie.html">Logowanie</a></li> <!-- Zaktualizowany link -->
             </ul>
         </nav>
     </aside>
 
     <!-- sekcja główna -->
     <section id="main">
-        <center>
-            <h2>Logowanie do systemu STARTER SPORTOWY</h2>
-            <form method="POST" action="?log=1">
-                <input type="hidden" name="from" value="/index.php">
-                <input type="hidden" name="LP_Impreza" value="1">
-                <table>
-                    <tr>
-                        <td align="right">Login:</td>
-                        <td><input type="text" name="login" required=""></td>
-                    </tr>
-                    <tr>
-                        <td align="right">Hasło:</td>
-                        <td><input type="password" name="haslo" required=""></td>
-                    </tr>
-                </table>
-                <div>
-                    <button type="submit" name="przycisk" value=" Zaloguj ">ZALOGUJ</button>
-                </div>
-            </form>
-            <a href="nowe_konto.html">Utwórz nowe konto</a>
-        </center>
+        <h2>Aktualności</h2>
+        <div class="news-section">
+            <div class="news-item">
+                <h3>Nowe wydarzenia sportowe!</h3>
+                <p>W tym roku odbędzie się szereg nowych wydarzeń sportowych. Zachęcamy do rejestracji do 15 maja. Wśród nowości znajdą się:</p>
+                <ul>
+                    <li>Mistrzostwa Polski w badmintonie</li>
+                    <li>Nowe kategorie wiekowe w boksie</li>
+                    <li>Wprowadzenie zawodów w łyżwiarstwie figurowym dla dzieci</li>
+                </ul>
+            </div>
+            <div class="news-item">
+                <h3>Wymogi do startu w zawodach</h3>
+                <p>Aby wziąć udział w Mistrzostwach Polski w lekkoatletyce, każdy zawodnik musi przedłożyć aktualne badania lekarskie oraz potwierdzenie przynależności do klubu sportowego.</p>
+            </div>
+            <div class="news-item">
+                <h3>Zapisy na zawody</h3>
+                <p>Zapisy na Drużynowe Mistrzostwa Polski trwają do końca maja. Nie przegap szansy na udział! Szczegóły dostępne na stronie wydarzenia.</p>
+            </div>
+            <div class="news-item">
+                <h3>Zmiany w regulaminie</h3>
+                <p>Prosimy zapoznać się z nowymi zmianami w regulaminie zawodów, które wejdą w życie od 1 czerwca. Najważniejsze zmiany to:</p>
+                <ul>
+                    <li>Nowe przepisy dotyczące sprzętu</li>
+                    <li>Zmiana zasad kwalifikacji do finałów</li>
+                </ul>
+            </div>
+            <div class="news-item">
+                <h3>Nowe kategorie wiekowe</h3>
+                <p>Wprowadziliśmy nowe kategorie wiekowe w zawodach, aby dać szansę młodszym zawodnikom na rywalizację. Zachęcamy do zapoznania się z nowym regulaminem.</p>
+            </div>
+        </div>
+
+        <!-- Przycisk powrotu do logowania -->
+        <a href="logowanie.html" class="back-button">Powrót do logowania</a>
     </section>
 
     <!-- stopka -->
