@@ -144,9 +144,12 @@
             // Możesz dodać tutaj kod do rejestracji na wydarzenie w bazie danych
         });
 
+        // Logika wylogowywania
         $("#logout").on("click", function() {
-            alert("Wylogowano.");
-            // Możesz dodać tutaj kod do wylogowywania z systemu
+            if (confirm("Czy na pewno chcesz się wylogować?")) {
+                // Po kliknięciu OK, przekierowanie na stronę logowania
+                window.location.href = "logowanie.html";
+            }
         });
     });
 </script>

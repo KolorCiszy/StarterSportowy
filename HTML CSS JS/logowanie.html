@@ -131,24 +131,25 @@
     <section id="main">
         <center>
             <h2>Logowanie do systemu STARTER SPORTOWY</h2>
-            <form method="POST" action="?log=1">
+            <form id="loginForm" method="POST">
                 <input type="hidden" name="from" value="/index.php">
                 <input type="hidden" name="LP_Impreza" value="1">
                 <table>
                     <tr>
                         <td align="right">Login:</td>
-                        <td><input type="text" name="login" required=""></td>
+                        <td><input type="text" id="login" name="login" required=""></td>
                     </tr>
                     <tr>
                         <td align="right">Hasło:</td>
-                        <td><input type="password" name="haslo" required=""></td>
+                        <td><input type="password" id="haslo" name="haslo" required=""></td>
                     </tr>
                 </table>
                 <div>
                     <button type="submit" name="przycisk" value=" Zaloguj ">ZALOGUJ</button>
                 </div>
             </form>
-            <a href="nowe_konto.html">Utwórz nowe konto</a>
+            <a href="nowe_konto.html">Utwórz nowe konto</a><br>
+            <a href="odzyskiwanie.html">Nie pamiętam hasła</a>
         </center>
     </section>
 
@@ -164,6 +165,23 @@
     $(document).ready(function() {
         $(".menu-trigger").click(function() {
             $('nav').slideToggle();
+        });
+
+        $("#loginForm").submit(function(event) {
+            event.preventDefault(); // Zatrzymujemy wysyłanie formularza
+
+            // Pobieramy dane z formularza
+            var login = $("#login").val();
+            var haslo = $("#haslo").val();
+
+            // Sprawdzamy login i hasło
+            if (login === "admin" && haslo === "zaq1@WSX") {
+                window.location.href = "admin.html"; // Przekierowanie do panelu administratora
+            } else if (login === "user" && haslo === "zaq1@WSX") {
+                window.location.href = "uzytkownik.html"; // Przekierowanie do strony użytkownika
+            } else {
+                alert("Nieprawidłowy login lub hasło");
+            }
         });
     });
 </script>

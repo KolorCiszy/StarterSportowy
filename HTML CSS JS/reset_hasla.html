@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetowanie hasła - STARTER SPORTOWY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://startersportowy.pl/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            width: 1050px;
+            margin: auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745; /* Zielony przycisk */
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838; /* Ciemniejszy zielony */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>STARTER SPORTOWY</h1>
+    </header>
+
+    <!-- sekcja główna -->
+    <section>
+        <h2>Resetowanie hasła</h2>
+        <form method="POST" action="wyslij_email.php">
+            <label for="email">Podaj swój adres e-mail:</label><br><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <button type="submit">Wyślij instrukcje resetowania hasła</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Pomoc techniczna: <a href="mailto:support@startersportowy.pl">support@startersportowy.pl</a></p>
+        <p>&#169; 2021-2024 STARTER SPORTOWY | Czas: 0.015029 s.</p>
+    </footer>
+</div>
+
+</body>
+</html>
